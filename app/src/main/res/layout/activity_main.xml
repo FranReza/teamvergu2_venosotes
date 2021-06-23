@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
-        android:text="Asistencias"
+        android:text="Asistencias Version 0.3"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/appicon" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Crear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -39,6 +39,15 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:text="Cargas Archivos" />
+
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="btnListaAlu"
+        android:text="Ver Lista de Alumnos" />
 
     <Button
         android:id="@+id/button3"
