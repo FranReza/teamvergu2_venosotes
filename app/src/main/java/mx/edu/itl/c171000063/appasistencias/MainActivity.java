@@ -14,12 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import mx.edu.itl.c171000063.appasistencias.db.DbHelper;
+import mx.edu.itl.c171000063.appasistencias.DB.dbHelper;
 import teclag.c18130597.androlib.util.permisos.ChecadorDePermisos;
 import teclag.c18130597.androlib.util.permisos.PermisoApp;
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private void Inicializar(){
         if(cantidadRegistros() == 0){
             String[] texto = leerArchivo();
-            DbHelper dbHelper = new DbHelper(this, "Base de datos", null, 1);
+            dbHelper dbHelper = new dbHelper(this, "Base de datos", null, 1);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.beginTransaction();
 
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     //CUENTA LA CNATIDAD DE REGISTROS EN LA TABLA
     private long cantidadRegistros(){
-        DbHelper dbHelper = new DbHelper(this, "Base de datos", null, 1);
+        dbHelper dbHelper = new dbHelper(this, "Base de datos", null, 1);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         long cn = DatabaseUtils.queryNumEntries(db,"Alumnos");
         db.close();

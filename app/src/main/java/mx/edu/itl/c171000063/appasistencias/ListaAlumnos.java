@@ -7,16 +7,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import mx.edu.itl.c171000063.appasistencias.db.DbHelper;
+import mx.edu.itl.c171000063.appasistencias.DB.dbHelper;
 import mx.edu.itl.c171000063.appasistencias.entidades.Alumnos;
 
 public class ListaAlumnos extends AppCompatActivity {
@@ -27,10 +25,7 @@ public class ListaAlumnos extends AppCompatActivity {
 
     Button btn18, btn19;
 
-    DbHelper conn;
-// si verdad? es todo esto smn SI ok ok ok ira
-    //si quieres subir algun cambio a la nube es asi
-    String prueba = "xd";
+    dbHelper conn;
     String opcion = "SELECT * FROM Alumnos";
     String opcion2 = "SELECT * FROM Alumnos";
     String opcion3 = "SELECT * FROM Alumnos";
@@ -42,7 +37,7 @@ public class ListaAlumnos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_alumnos);
 
-        conn = new DbHelper(getApplicationContext(), "Base de datos",null,1);
+        conn = new dbHelper(getApplicationContext(), "Base de datos",null,1);
 
         listViewAlumnos = findViewById( R.id.listViewAlumnos );
         consultarListaAlumnos();
@@ -52,10 +47,7 @@ public class ListaAlumnos extends AppCompatActivity {
 
         btn18 = findViewById( R.id.button18 );
         btn19 = findViewById( R.id.button19);
-        String hola = "jhon"; //este yo lo meti desde mi pc, asi actualizas tu repo y ves lo que le metimos okk yse actualiza con el mio? o es nuevo se acutailiza con el tuyo
-    }//nomas que veo un error curioso, espera no se que sea eso pero si se refleja XD que cosa? lo rojo de consola
-    //a ver una prueba mas
-
+    }
 
     public void btn18click( View v ){
         Intent intent = new Intent( this, ListaAlumnos.class);
