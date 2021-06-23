@@ -28,7 +28,9 @@ public class ListaAlumnos extends AppCompatActivity {
     Button btn18, btn19;
 
     DbHelper conn;
-
+// si verdad? es todo esto smn SI ok ok ok ira
+    //si quieres subir algun cambio a la nube es asi
+    String prueba = "xd";
     String opcion = "SELECT * FROM Alumnos";
     String opcion2 = "SELECT * FROM Alumnos";
     String opcion3 = "SELECT * FROM Alumnos";
