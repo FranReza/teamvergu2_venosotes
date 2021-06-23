@@ -50,6 +50,7 @@ public class ListaAlumnos extends AppCompatActivity {
 
         btn18 = findViewById( R.id.button18 );
         btn19 = findViewById( R.id.button19);
+        String hola = "jhon";
     }
 
     public void btn18click( View v ){
