@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
-        android:text="Asistencias Version 0.3"
+        android:text="Asistencias Version NOse"
         android:textSize="30sp"
         android:textStyle="bold" />
 
